@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+}
+
+.main-container {
+  height: 100%;
+  display: grid;
+}
+
+@media (max-width: 991px) {
+  .main-container {
+  grid-template-areas: "header"
+                       "one"
+                       "two"
+                       "three"; 
+  }
+}
+
+@media (min-width: 992px) {
+  .main-container {
+  grid-template-areas: "header header header"
+                       "one two three"; 
+  }
+}
+
+header {
+  background-color: pink;
+  width: 100%;
+  grid-area: header;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  background-color: lightblue;
+}
+
+#one {
+  grid-area: one;
+}
+
+#two {
+  grid-area: two;
+}
+
+#three {
+  grid-area: three;
+}
